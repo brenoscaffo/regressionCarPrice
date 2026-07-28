@@ -136,7 +136,6 @@ Inicialmente está sendo utilizado o algoritmo:
 Posteriormente serão adicionados outros algoritmos para comparação, como:
 
 - Decision Tree Regressor
-- Random Forest Regressor
 - XGBoost Regressor
 
 ---
