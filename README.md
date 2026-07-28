@@ -183,9 +183,8 @@ O objetivo final é comparar:
 | Linear Regression | Label Encoding | - | - | - | - |
 | Decision Tree | One-Hot Encoding | - | - | - | - |
 | Decision Tree | Label Encoding | - | - | - | - |
-| Random Forest | One-Hot Encoding | - | - | - | - |
-| Random Forest | Label Encoding | - | - | - | - |
 | XGBoost | One-Hot Encoding | - | - | - | - |
+| XGBoost | Label Encoding | - | - | - | - |
 
 ---
 
