@@ -138,6 +138,7 @@ Posteriormente serão adicionados outros algoritmos para comparação, como:
 
 - Decision Tree Regressor
 - XGBoost Regressor
+- LightGBM Regressor
 
 ---
 
