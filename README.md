@@ -59,6 +59,7 @@ Este projeto busca responder às seguintes perguntas:
 - Scikit-Learn
 - XGBoost
 - KaggleHub
+- LightGBM
 
 ---
 
@@ -151,7 +152,6 @@ Entre elas:
 - MAE (Mean Absolute Error)
 - RMSE (Root Mean Squared Error)
 - MAPE (Mean Absolute Percentage Error)
-- Cross Validation
 
 Essas métricas permitem avaliar tanto a capacidade de explicação quanto o erro médio das previsões.
 
@@ -176,15 +176,16 @@ Os resultados serão atualizados conforme o desenvolvimento do projeto.
 
 O objetivo final é comparar:
 
-| Modelo | Pré-processamento | R² | RMSE | MAE | MAPE |
-|---------|------------------|----|------|-----|------|
-| Linear Regression | One-Hot Encoding | - | - | - | - |
-| Linear Regression | Label Encoding | - | - | - | - |
-| Decision Tree | One-Hot Encoding | - | - | - | - |
-| Decision Tree | Label Encoding | - | - | - | - |
-| XGBoost | One-Hot Encoding | - | - | - | - |
-| XGBoost | Label Encoding | - | - | - | - |
-
+| Modelo | Pré-processamento | R² | R² Ajustado | RMSE | MAE | MAPE |
+|---------|------------------|----|------|-----|------|------|
+| Linear Regression | One-Hot Encoding | - | - | - | - | - |
+| Linear Regression | Label Encoding | - | - | - | - | - |
+| Decision Tree | One-Hot Encoding | - | - | - | - | - |
+| Decision Tree | Label Encoding | - | - | - | - | - |
+| XGBoost | One-Hot Encoding | - | - | - | - | - |
+| XGBoost | Label Encoding | - | - | - | - | - |
+| LightGMB | One-Hot Enconding | - | - | - | - | - |
+| LightGMB | Label Enconding | - | - | - | - | - |
 ---
 
 ## Aprendizados
