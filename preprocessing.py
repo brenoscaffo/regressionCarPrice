@@ -6,12 +6,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import kagglehub
 from kagglehub import KaggleDatasetAdapter
+from sklearn.preprocessing import StandardScaler
 
 #%%
 mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 mlflow.set_experiment(experiment_id="3")
-#%%
 
+#%%
 df = kagglehub.load_dataset(
     KaggleDatasetAdapter.PANDAS,
     "adhurimquku/ford-car-price-prediction",
@@ -21,36 +22,29 @@ df = kagglehub.load_dataset(
 df.head()
 
 #%%
-
 df.shape
 
 #%%
-
 df.info()
 
 #%%
-
 df.describe()
 
 #%%
-
 df.isnull().sum()
 
 #%%
-
 sns.histplot(df['price'], bins = 50, kde = True)
 plt.xlabel("Price")
 plt.ylabel("Frequency")
 plt.title("Price distribuition")
 
 #%%
-
 sns.heatmap(df.corr(numeric_only = True), annot=True)
 plt.yticks(rotation = 0)
 plt.title("Correlation Heatmap")
 
 #%%
-
 sns.boxplot(data= df, x = 'year', y = 'price', palette='viridis')
 plt.xticks(rotation = 90)
 plt.xlabel("Year")
@@ -58,7 +52,6 @@ plt.ylabel("Price")
 plt.title("Distribuition of Price by year")
 
 #%%
-
 sns.scatterplot(data = df, x = 'mileage', y = 'price')
 plt.xlabel("Distance (miles)")
 plt.ylabel("Price")
@@ -84,7 +77,6 @@ plt.title("Distribution of Price by Fuel Type")
 
 
 #%%
-
 sns.boxplot(data = df, x = 'model', y = 'price', palette='viridis')
 plt.xticks(rotation = 90)
 plt.xlabel("Models")
@@ -103,6 +95,7 @@ X
 
 #%%
 df.columns
+
 #%%
 X_encoded = pd.get_dummies(X, columns = ['model', 'transmission', 'fuelType'], drop_first=True)
 
